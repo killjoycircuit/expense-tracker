@@ -44,7 +44,7 @@ A simple web app to track your **income** and **expenses**. Built with HTML, CSS
 
 ## 📸 Screenshot
 
-![App Screenshot](screenshot.png)
+![App Screenshot](asset/screenshot.png)
 
 
 
