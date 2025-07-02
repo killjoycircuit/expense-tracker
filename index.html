@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expense Tracker</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <button id="download-btn" title="Download Excel">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24" style="vertical-align: middle;">
+        <path d="M5 20h14v-2H5v2zm7-14v8m0 0l-4-4m4 4l4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <span style="margin-left: 8px;">Download</span>
+    </button>
+
+
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <form id="transaction-form" class="form">
+      <input type="date" id="date" required />
+      <input type="text" id="description" placeholder="Description" required />
+      <select id="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Health</option>
+        <option>Entertainment</option>
+        <option>Utilities</option>
+        <option>Others</option>
+      </select>
+      <input type="number" step="0.01" min="0" id="amount" placeholder="Amount" required />
+      <select id="type" required>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button type="submit">Add Transaction</button>
+      <p id="error" class="error"></p>
+    </form>
+
+    <section class="summary">
+      <p>Total Income: <span class="green" id="total-income">0.00</span></p>
+      <p>Total Expense: <span class="red" id="total-expense">0.00</span></p>
+      <p>Net Balance: <span id="net-balance">0.00</span></p>
+    </section>
+
+    <canvas id="expenseChart" width="400" height="200"></canvas>
+
+
+    <ul id="transaction-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
