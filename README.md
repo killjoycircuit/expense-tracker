@@ -38,7 +38,7 @@ A simple web app to track your **income** and **expenses**. Built with HTML, CSS
 
 - **HTML + CSS + JavaScript**
 - **Local Storage** – To save your data
-- **SheetJS** – For Excel export
+- **SheetJS** – For Excel export feature
 
 ---
 
